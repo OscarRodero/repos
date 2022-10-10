@@ -1,0 +1,8 @@
+C:\Users\dam201\source\repos\PruebaFormulario\PruebaFormulario\obj\Debug\net6.0-windows\PruebaFormulario.csproj.AssemblyReference.cache
+C:\Users\dam201\source\repos\PruebaFormulario\PruebaFormulario\obj\Debug\net6.0-windows\PruebaFormulario.FormContenedor.resources
+C:\Users\dam201\source\repos\PruebaFormulario\PruebaFormulario\obj\Debug\net6.0-windows\PruebaFormulario.frmTextBox.resources
+C:\Users\dam201\source\repos\PruebaFormulario\PruebaFormulario\obj\Debug\net6.0-windows\PruebaFormulario.csproj.GenerateResource.cache
+C:\Users\dam201\source\repos\PruebaFormulario\PruebaFormulario\obj\Debug\net6.0-windows\PruebaFormulario.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dam201\source\repos\PruebaFormulario\PruebaFormulario\obj\Debug\net6.0-windows\PruebaFormulario.AssemblyInfoInputs.cache
+C:\Users\dam201\source\repos\PruebaFormulario\PruebaFormulario\obj\Debug\net6.0-windows\PruebaFormulario.AssemblyInfo.cs
+C:\Users\dam201\source\repos\PruebaFormulario\PruebaFormulario\obj\Debug\net6.0-windows\PruebaFormulario.csproj.CoreCompileInputs.cache

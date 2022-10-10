@@ -1,0 +1,7 @@
+C:\Users\dam201\source\repos\WinFormsAppPrueba\WinFormsAppPrueba\obj\Debug\net6.0-windows\WinFormsAppPrueba.csproj.AssemblyReference.cache
+C:\Users\dam201\source\repos\WinFormsAppPrueba\WinFormsAppPrueba\obj\Debug\net6.0-windows\WinFormsAppPrueba.Form1.resources
+C:\Users\dam201\source\repos\WinFormsAppPrueba\WinFormsAppPrueba\obj\Debug\net6.0-windows\WinFormsAppPrueba.csproj.GenerateResource.cache
+C:\Users\dam201\source\repos\WinFormsAppPrueba\WinFormsAppPrueba\obj\Debug\net6.0-windows\WinFormsAppPrueba.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dam201\source\repos\WinFormsAppPrueba\WinFormsAppPrueba\obj\Debug\net6.0-windows\WinFormsAppPrueba.AssemblyInfoInputs.cache
+C:\Users\dam201\source\repos\WinFormsAppPrueba\WinFormsAppPrueba\obj\Debug\net6.0-windows\WinFormsAppPrueba.AssemblyInfo.cs
+C:\Users\dam201\source\repos\WinFormsAppPrueba\WinFormsAppPrueba\obj\Debug\net6.0-windows\WinFormsAppPrueba.csproj.CoreCompileInputs.cache
