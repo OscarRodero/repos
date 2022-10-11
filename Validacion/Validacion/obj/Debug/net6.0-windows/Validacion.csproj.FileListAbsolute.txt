@@ -1,0 +1,17 @@
+C:\Users\dam201\source\repos\Validacion\Validacion\bin\Debug\net6.0-windows\Validacion.exe
+C:\Users\dam201\source\repos\Validacion\Validacion\bin\Debug\net6.0-windows\Validacion.deps.json
+C:\Users\dam201\source\repos\Validacion\Validacion\bin\Debug\net6.0-windows\Validacion.runtimeconfig.json
+C:\Users\dam201\source\repos\Validacion\Validacion\bin\Debug\net6.0-windows\Validacion.dll
+C:\Users\dam201\source\repos\Validacion\Validacion\bin\Debug\net6.0-windows\Validacion.pdb
+C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\Validacion.csproj.AssemblyReference.cache
+C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\Validacion.Form1.resources
+C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\Validacion.csproj.GenerateResource.cache
+C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\Validacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\Validacion.AssemblyInfoInputs.cache
+C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\Validacion.AssemblyInfo.cs
+C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\Validacion.csproj.CoreCompileInputs.cache
+C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\Validacion.dll
+C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\refint\Validacion.dll
+C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\Validacion.pdb
+C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\Validacion.genruntimeconfig.cache
+C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\ref\Validacion.dll
