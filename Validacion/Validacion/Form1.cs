@@ -12,12 +12,22 @@ namespace Validacion
             try {
                 comprobarEmail(txtCorreo.Text);
             } catch (ExcepcionCorreo Exc) {
-                MessageBox.Show("El correo introducido no valida");
+                MessageBox.Show(Exc.Message);
             }
         }
 
-        class ExcepcionCorreo : Exception { 
-            
+        class ExcepcionCorreo : ApplicationException {
+
+            string mensaje;
+            public ExcepcionCorreo(string mensaje) {
+                this.mensaje = mensaje;
+            }
+            public string Mensaje
+            {
+                get {
+                    return this.mensaje;
+                }
+            }
         }
         private void comprobarEmail(String txtCorreo)
         {
