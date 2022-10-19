@@ -41,7 +41,7 @@
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.mtxtMatricula = new System.Windows.Forms.MaskedTextBox();
             this.mtxtNIF = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtNombreCuenta = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtNumeroCuenta = new System.Windows.Forms.MaskedTextBox();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.mtxtMovil = new System.Windows.Forms.MaskedTextBox();
@@ -108,16 +108,18 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(121, 15);
             this.label7.TabIndex = 6;
-            this.label7.Text = "Nombre de la cuenta:";
+            this.label7.Text = "Número de la cuenta:";
             // 
             // btnArchivar
             // 
+            this.btnArchivar.Enabled = false;
             this.btnArchivar.Location = new System.Drawing.Point(216, 312);
             this.btnArchivar.Name = "btnArchivar";
             this.btnArchivar.Size = new System.Drawing.Size(176, 40);
             this.btnArchivar.TabIndex = 7;
             this.btnArchivar.Text = "Archivar";
             this.btnArchivar.UseVisualStyleBackColor = true;
+            this.btnArchivar.Click += new System.EventHandler(this.btnArchivar_Click);
             // 
             // btnValidar
             // 
@@ -131,12 +133,13 @@
             // 
             // btnVerArchivo
             // 
-            this.btnVerArchivo.Location = new System.Drawing.Point(304, 376);
+            this.btnVerArchivo.Location = new System.Drawing.Point(216, 376);
             this.btnVerArchivo.Name = "btnVerArchivo";
-            this.btnVerArchivo.Size = new System.Drawing.Size(184, 39);
+            this.btnVerArchivo.Size = new System.Drawing.Size(360, 39);
             this.btnVerArchivo.TabIndex = 9;
             this.btnVerArchivo.Text = "Ver Datos Archivados";
             this.btnVerArchivo.UseVisualStyleBackColor = true;
+            this.btnVerArchivo.Click += new System.EventHandler(this.btnVerArchivo_Click);
             // 
             // txtNombre
             // 
@@ -161,13 +164,13 @@
             this.mtxtNIF.Size = new System.Drawing.Size(144, 23);
             this.mtxtNIF.TabIndex = 13;
             // 
-            // mtxtNombreCuenta
+            // mtxtNumeroCuenta
             // 
-            this.mtxtNombreCuenta.Location = new System.Drawing.Point(200, 256);
-            this.mtxtNombreCuenta.Mask = "ES00-0000.0000.00.0000000000";
-            this.mtxtNombreCuenta.Name = "mtxtNombreCuenta";
-            this.mtxtNombreCuenta.Size = new System.Drawing.Size(328, 23);
-            this.mtxtNombreCuenta.TabIndex = 14;
+            this.mtxtNumeroCuenta.Location = new System.Drawing.Point(200, 256);
+            this.mtxtNumeroCuenta.Mask = "ES00-0000.0000.00.0000000000";
+            this.mtxtNumeroCuenta.Name = "mtxtNumeroCuenta";
+            this.mtxtNumeroCuenta.Size = new System.Drawing.Size(328, 23);
+            this.mtxtNumeroCuenta.TabIndex = 14;
             // 
             // txtApellidos
             // 
@@ -199,7 +202,7 @@
             this.Controls.Add(this.mtxtMovil);
             this.Controls.Add(this.txtCorreo);
             this.Controls.Add(this.txtApellidos);
-            this.Controls.Add(this.mtxtNombreCuenta);
+            this.Controls.Add(this.mtxtNumeroCuenta);
             this.Controls.Add(this.mtxtNIF);
             this.Controls.Add(this.mtxtMatricula);
             this.Controls.Add(this.txtNombre);
@@ -235,7 +238,7 @@
         private TextBox txtNombre;
         private MaskedTextBox mtxtMatricula;
         private MaskedTextBox mtxtNIF;
-        private MaskedTextBox mtxtNombreCuenta;
+        private MaskedTextBox mtxtNumeroCuenta;
         private TextBox txtApellidos;
         private TextBox txtCorreo;
         private MaskedTextBox mtxtMovil;

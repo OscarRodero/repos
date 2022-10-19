@@ -15,3 +15,4 @@ C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\refi
 C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\Validacion.pdb
 C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\Validacion.genruntimeconfig.cache
 C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\ref\Validacion.dll
+C:\Users\dam201\source\repos\Validacion\Validacion\obj\Debug\net6.0-windows\Validacion.ArchivoDatos.resources

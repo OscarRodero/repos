@@ -1,0 +1,12 @@
+C:\Users\dam201\source\repos\Probando2\Probando2\obj\Debug\Probando2.csproj.AssemblyReference.cache
+C:\Users\dam201\source\repos\Probando2\Probando2\obj\Debug\Probando2.csproj.SuggestedBindingRedirects.cache
+C:\Users\dam201\source\repos\Probando2\Probando2\obj\Debug\Probando2.Form1.resources
+C:\Users\dam201\source\repos\Probando2\Probando2\obj\Debug\Probando2.Form2.resources
+C:\Users\dam201\source\repos\Probando2\Probando2\obj\Debug\Probando2.Properties.Resources.resources
+C:\Users\dam201\source\repos\Probando2\Probando2\obj\Debug\Probando2.csproj.GenerateResource.cache
+C:\Users\dam201\source\repos\Probando2\Probando2\obj\Debug\Probando2.csproj.CoreCompileInputs.cache
+C:\Users\dam201\source\repos\Probando2\Probando2\bin\Debug\Probando2.exe.config
+C:\Users\dam201\source\repos\Probando2\Probando2\bin\Debug\Probando2.exe
+C:\Users\dam201\source\repos\Probando2\Probando2\bin\Debug\Probando2.pdb
+C:\Users\dam201\source\repos\Probando2\Probando2\obj\Debug\Probando2.exe
+C:\Users\dam201\source\repos\Probando2\Probando2\obj\Debug\Probando2.pdb
