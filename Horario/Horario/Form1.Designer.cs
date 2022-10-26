@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvHorario = new System.Windows.Forms.DataGridView();
             this.gbHorario = new System.Windows.Forms.GroupBox();
             this.cbDia = new System.Windows.Forms.ComboBox();
             this.cbHora = new System.Windows.Forms.ComboBox();
@@ -43,18 +43,30 @@
             this.labelModulos = new System.Windows.Forms.Label();
             this.labelCurso = new System.Windows.Forms.Label();
             this.labelCiclo = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.sfdGuardar = new System.Windows.Forms.SaveFileDialog();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.dsDatos = new System.Data.DataSet();
+            this.ofdAbrir = new System.Windows.Forms.OpenFileDialog();
+            this.btnAñadir = new System.Windows.Forms.Button();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
+            this.backgroundWorker3 = new System.ComponentModel.BackgroundWorker();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorario)).BeginInit();
             this.gbHorario.SuspendLayout();
             this.gbDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvHorario
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(752, 176);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvHorario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvHorario.Location = new System.Drawing.Point(16, 16);
+            this.dgvHorario.MultiSelect = false;
+            this.dgvHorario.Name = "dgvHorario";
+            this.dgvHorario.ReadOnly = true;
+            this.dgvHorario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvHorario.Size = new System.Drawing.Size(752, 176);
+            this.dgvHorario.TabIndex = 0;
             // 
             // gbHorario
             // 
@@ -72,18 +84,33 @@
             // cbDia
             // 
             this.cbDia.FormattingEnabled = true;
+            this.cbDia.Items.AddRange(new object[] {
+            "Lunes",
+            "Martes",
+            "Miércoles",
+            "Jueves",
+            "Viernes"});
             this.cbDia.Location = new System.Drawing.Point(64, 56);
             this.cbDia.Name = "cbDia";
             this.cbDia.Size = new System.Drawing.Size(121, 21);
             this.cbDia.TabIndex = 3;
+            this.cbDia.SelectedIndexChanged += new System.EventHandler(this.cbDia_SelectedIndexChanged);
             // 
             // cbHora
             // 
             this.cbHora.FormattingEnabled = true;
+            this.cbHora.Items.AddRange(new object[] {
+            "1ª",
+            "2ª",
+            "3ª",
+            "4ª",
+            "5ª",
+            "6ª"});
             this.cbHora.Location = new System.Drawing.Point(64, 24);
             this.cbHora.Name = "cbHora";
             this.cbHora.Size = new System.Drawing.Size(121, 21);
             this.cbHora.TabIndex = 2;
+            this.cbHora.SelectedIndexChanged += new System.EventHandler(this.cbHora_SelectedIndexChanged);
             // 
             // labelDia
             // 
@@ -111,6 +138,7 @@
             this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar Horario";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCargar
             // 
@@ -120,6 +148,7 @@
             this.btnCargar.TabIndex = 3;
             this.btnCargar.Text = "Cargar Horario";
             this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // gbDatos
             // 
@@ -147,10 +176,13 @@
             // lbListaCiclo
             // 
             this.lbListaCiclo.FormattingEnabled = true;
+            this.lbListaCiclo.Items.AddRange(new object[] {
+            "DAM"});
             this.lbListaCiclo.Location = new System.Drawing.Point(56, 48);
             this.lbListaCiclo.Name = "lbListaCiclo";
             this.lbListaCiclo.Size = new System.Drawing.Size(120, 134);
             this.lbListaCiclo.TabIndex = 4;
+            this.lbListaCiclo.SelectedIndexChanged += new System.EventHandler(this.lbListaCiclo_SelectedIndexChanged);
             // 
             // cbCurso
             // 
@@ -159,6 +191,7 @@
             this.cbCurso.Name = "cbCurso";
             this.cbCurso.Size = new System.Drawing.Size(176, 21);
             this.cbCurso.TabIndex = 3;
+            this.cbCurso.SelectedIndexChanged += new System.EventHandler(this.cbCurso_SelectedIndexChanged);
             // 
             // labelModulos
             // 
@@ -187,31 +220,62 @@
             this.labelCiclo.TabIndex = 0;
             this.labelCiclo.Text = "Ciclo:";
             // 
+            // dsDatos
+            // 
+            this.dsDatos.DataSetName = "NewDataSet";
+            // 
+            // ofdAbrir
+            // 
+            this.ofdAbrir.FileName = "openFileDialog1";
+            // 
+            // btnAñadir
+            // 
+            this.btnAñadir.Location = new System.Drawing.Point(504, 408);
+            this.btnAñadir.Name = "btnAñadir";
+            this.btnAñadir.Size = new System.Drawing.Size(75, 23);
+            this.btnAñadir.TabIndex = 5;
+            this.btnAñadir.Text = "Agregar";
+            this.btnAñadir.UseVisualStyleBackColor = true;
+            this.btnAñadir.Click += new System.EventHandler(this.btnAñadir_Click);
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.Location = new System.Drawing.Point(656, 408);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(75, 23);
+            this.btnRemover.TabIndex = 6;
+            this.btnRemover.Text = "Quitar";
+            this.btnRemover.UseVisualStyleBackColor = true;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lime;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnRemover);
+            this.Controls.Add(this.btnAñadir);
             this.Controls.Add(this.gbDatos);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.gbHorario);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvHorario);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvHorario)).EndInit();
             this.gbHorario.ResumeLayout(false);
             this.gbHorario.PerformLayout();
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDatos)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvHorario;
         private System.Windows.Forms.GroupBox gbHorario;
         private System.Windows.Forms.ComboBox cbDia;
         private System.Windows.Forms.ComboBox cbHora;
@@ -226,6 +290,14 @@
         private System.Windows.Forms.Label labelModulos;
         private System.Windows.Forms.Label labelCurso;
         private System.Windows.Forms.Label labelCiclo;
+        private System.Windows.Forms.SaveFileDialog sfdGuardar;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Data.DataSet dsDatos;
+        private System.Windows.Forms.OpenFileDialog ofdAbrir;
+        private System.Windows.Forms.Button btnAñadir;
+        private System.Windows.Forms.Button btnRemover;
+        private System.ComponentModel.BackgroundWorker backgroundWorker2;
+        private System.ComponentModel.BackgroundWorker backgroundWorker3;
     }
 }
 
