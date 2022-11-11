@@ -1,0 +1,14 @@
+C:\Users\dam201\source\repos\Peliculas\Peliculas\bin\Debug\Peliculas.exe.config
+C:\Users\dam201\source\repos\Peliculas\Peliculas\bin\Debug\Peliculas.exe
+C:\Users\dam201\source\repos\Peliculas\Peliculas\bin\Debug\Peliculas.pdb
+C:\Users\dam201\source\repos\Peliculas\Peliculas\obj\Debug\Peliculas.csproj.AssemblyReference.cache
+C:\Users\dam201\source\repos\Peliculas\Peliculas\obj\Debug\Peliculas.csproj.SuggestedBindingRedirects.cache
+C:\Users\dam201\source\repos\Peliculas\Peliculas\obj\Debug\Peliculas.Form1.resources
+C:\Users\dam201\source\repos\Peliculas\Peliculas\obj\Debug\Peliculas.Properties.Resources.resources
+C:\Users\dam201\source\repos\Peliculas\Peliculas\obj\Debug\Peliculas.csproj.GenerateResource.cache
+C:\Users\dam201\source\repos\Peliculas\Peliculas\obj\Debug\Peliculas.csproj.CoreCompileInputs.cache
+C:\Users\dam201\source\repos\Peliculas\Peliculas\obj\Debug\Peliculas.exe
+C:\Users\dam201\source\repos\Peliculas\Peliculas\obj\Debug\Peliculas.pdb
+C:\Users\dam201\source\repos\Peliculas\Peliculas\obj\Debug\Peliculas.PanelPrincipal.resources
+C:\Users\dam201\source\repos\Peliculas\Peliculas\obj\Debug\Peliculas.BusquedaDeSociosForm.resources
+C:\Users\dam201\source\repos\Peliculas\Peliculas\obj\Debug\Peliculas.frmAlquileres.resources

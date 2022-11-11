@@ -20,9 +20,9 @@ namespace Peliculas {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("videoclubDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("videoclubBinarioDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class videoclubDataSet : global::System.Data.DataSet {
+    public partial class videoclubBinarioDataSet : global::System.Data.DataSet {
         
         private alquileresDataTable tablealquileres;
         
@@ -34,6 +34,8 @@ namespace Peliculas {
         
         private sociosDataTable tablesocios;
         
+        private alq_peliculas_sociosDataTable tablealq_peliculas_socios;
+        
         private global::System.Data.DataRelation relationalquileres_fk_pel;
         
         private global::System.Data.DataRelation relationalquileres_fk_soc;
@@ -42,11 +44,15 @@ namespace Peliculas {
         
         private global::System.Data.DataRelation relationpeliculas_fk_est;
         
+        private global::System.Data.DataRelation relationalquileres_fk_pel1;
+        
+        private global::System.Data.DataRelation relationalquileres_fk_soc1;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public videoclubDataSet() {
+        public videoclubBinarioDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -57,7 +63,7 @@ namespace Peliculas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected videoclubDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected videoclubBinarioDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -84,6 +90,9 @@ namespace Peliculas {
                 }
                 if ((ds.Tables["socios"] != null)) {
                     base.Tables.Add(new sociosDataTable(ds.Tables["socios"]));
+                }
+                if ((ds.Tables["alq_peliculas_socios"] != null)) {
+                    base.Tables.Add(new alq_peliculas_sociosDataTable(ds.Tables["alq_peliculas_socios"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -155,6 +164,16 @@ namespace Peliculas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public alq_peliculas_sociosDataTable alq_peliculas_socios {
+            get {
+                return this.tablealq_peliculas_socios;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -195,7 +214,7 @@ namespace Peliculas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            videoclubDataSet cln = ((videoclubDataSet)(base.Clone()));
+            videoclubBinarioDataSet cln = ((videoclubBinarioDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -234,6 +253,9 @@ namespace Peliculas {
                 }
                 if ((ds.Tables["socios"] != null)) {
                     base.Tables.Add(new sociosDataTable(ds.Tables["socios"]));
+                }
+                if ((ds.Tables["alq_peliculas_socios"] != null)) {
+                    base.Tables.Add(new alq_peliculas_sociosDataTable(ds.Tables["alq_peliculas_socios"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -298,18 +320,26 @@ namespace Peliculas {
                     this.tablesocios.InitVars();
                 }
             }
+            this.tablealq_peliculas_socios = ((alq_peliculas_sociosDataTable)(base.Tables["alq_peliculas_socios"]));
+            if ((initTable == true)) {
+                if ((this.tablealq_peliculas_socios != null)) {
+                    this.tablealq_peliculas_socios.InitVars();
+                }
+            }
             this.relationalquileres_fk_pel = this.Relations["alquileres_fk_pel"];
             this.relationalquileres_fk_soc = this.Relations["alquileres_fk_soc"];
             this.relationpeliculas_fk_cat = this.Relations["peliculas_fk_cat"];
             this.relationpeliculas_fk_est = this.Relations["peliculas_fk_est"];
+            this.relationalquileres_fk_pel1 = this.Relations["alquileres_fk_pel1"];
+            this.relationalquileres_fk_soc1 = this.Relations["alquileres_fk_soc1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "videoclubDataSet";
+            this.DataSetName = "videoclubBinarioDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/videoclubDataSet.xsd";
+            this.Namespace = "http://tempuri.org/videoclubBinarioDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablealquileres = new alquileresDataTable();
@@ -322,6 +352,8 @@ namespace Peliculas {
             base.Tables.Add(this.tablepeliculas);
             this.tablesocios = new sociosDataTable();
             base.Tables.Add(this.tablesocios);
+            this.tablealq_peliculas_socios = new alq_peliculas_sociosDataTable();
+            base.Tables.Add(this.tablealq_peliculas_socios);
             this.relationalquileres_fk_pel = new global::System.Data.DataRelation("alquileres_fk_pel", new global::System.Data.DataColumn[] {
                         this.tablepeliculas.codpeliColumn}, new global::System.Data.DataColumn[] {
                         this.tablealquileres.peliculaColumn}, false);
@@ -338,6 +370,14 @@ namespace Peliculas {
                         this.tableestilos.estiloColumn}, new global::System.Data.DataColumn[] {
                         this.tablepeliculas.estiloColumn}, false);
             this.Relations.Add(this.relationpeliculas_fk_est);
+            this.relationalquileres_fk_pel1 = new global::System.Data.DataRelation("alquileres_fk_pel1", new global::System.Data.DataColumn[] {
+                        this.tablepeliculas.codpeliColumn}, new global::System.Data.DataColumn[] {
+                        this.tablealq_peliculas_socios.PeliculaColumn}, false);
+            this.Relations.Add(this.relationalquileres_fk_pel1);
+            this.relationalquileres_fk_soc1 = new global::System.Data.DataRelation("alquileres_fk_soc1", new global::System.Data.DataColumn[] {
+                        this.tablesocios.idSocioColumn}, new global::System.Data.DataColumn[] {
+                        this.tablealq_peliculas_socios.SocioColumn}, false);
+            this.Relations.Add(this.relationalquileres_fk_soc1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -372,6 +412,12 @@ namespace Peliculas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializealq_peliculas_socios() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -381,7 +427,7 @@ namespace Peliculas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            videoclubDataSet ds = new videoclubDataSet();
+            videoclubBinarioDataSet ds = new videoclubBinarioDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -439,6 +485,9 @@ namespace Peliculas {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void sociosRowChangeEventHandler(object sender, sociosRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void alq_peliculas_sociosRowChangeEventHandler(object sender, alq_peliculas_sociosRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -721,7 +770,7 @@ namespace Peliculas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                videoclubDataSet ds = new videoclubDataSet();
+                videoclubBinarioDataSet ds = new videoclubBinarioDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -994,7 +1043,7 @@ namespace Peliculas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                videoclubDataSet ds = new videoclubDataSet();
+                videoclubBinarioDataSet ds = new videoclubBinarioDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1253,7 +1302,7 @@ namespace Peliculas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                videoclubDataSet ds = new videoclubDataSet();
+                videoclubBinarioDataSet ds = new videoclubBinarioDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1489,7 +1538,7 @@ namespace Peliculas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public peliculasRow AddpeliculasRow(string titulo, string director, string protagonista, string argumento, estilosRow parentestilosRowBypeliculas_fk_est, int anio, string caratula, categoriasRow parentcategoriasRowBypeliculas_fk_cat, int stock) {
+            public peliculasRow AddpeliculasRow(string titulo, string director, string protagonista, string argumento, estilosRow parentestilosRowBypeliculas_fk_est, int anio, byte[] caratula, categoriasRow parentcategoriasRowBypeliculas_fk_cat, int stock) {
                 peliculasRow rowpeliculasRow = ((peliculasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1566,7 +1615,7 @@ namespace Peliculas {
                 base.Columns.Add(this.columnestilo);
                 this.columnanio = new global::System.Data.DataColumn("anio", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnanio);
-                this.columncaratula = new global::System.Data.DataColumn("caratula", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncaratula = new global::System.Data.DataColumn("caratula", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncaratula);
                 this.columncategoria = new global::System.Data.DataColumn("categoria", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncategoria);
@@ -1586,7 +1635,6 @@ namespace Peliculas {
                 this.columnargumento.MaxLength = 1000;
                 this.columnestilo.AllowDBNull = false;
                 this.columnestilo.MaxLength = 100;
-                this.columncaratula.MaxLength = 500;
                 this.columncategoria.AllowDBNull = false;
                 this.columncategoria.MaxLength = 100;
             }
@@ -1656,7 +1704,7 @@ namespace Peliculas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                videoclubDataSet ds = new videoclubDataSet();
+                videoclubBinarioDataSet ds = new videoclubBinarioDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2053,7 +2101,7 @@ namespace Peliculas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                videoclubDataSet ds = new videoclubDataSet();
+                videoclubBinarioDataSet ds = new videoclubBinarioDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2072,6 +2120,361 @@ namespace Peliculas {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "sociosDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class alq_peliculas_sociosDataTable : global::System.Data.TypedTableBase<alq_peliculas_sociosRow> {
+            
+            private global::System.Data.DataColumn columnFechaAlquiler;
+            
+            private global::System.Data.DataColumn columntitulo;
+            
+            private global::System.Data.DataColumn columncodAlquiler;
+            
+            private global::System.Data.DataColumn columnSocio;
+            
+            private global::System.Data.DataColumn columnPelicula;
+            
+            private global::System.Data.DataColumn columnFechaDevolucion;
+            
+            private global::System.Data.DataColumn columnPrecio;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public alq_peliculas_sociosDataTable() {
+                this.TableName = "alq_peliculas_socios";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal alq_peliculas_sociosDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected alq_peliculas_sociosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FechaAlquilerColumn {
+                get {
+                    return this.columnFechaAlquiler;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn tituloColumn {
+                get {
+                    return this.columntitulo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn codAlquilerColumn {
+                get {
+                    return this.columncodAlquiler;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SocioColumn {
+                get {
+                    return this.columnSocio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PeliculaColumn {
+                get {
+                    return this.columnPelicula;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn FechaDevolucionColumn {
+                get {
+                    return this.columnFechaDevolucion;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PrecioColumn {
+                get {
+                    return this.columnPrecio;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public alq_peliculas_sociosRow this[int index] {
+                get {
+                    return ((alq_peliculas_sociosRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event alq_peliculas_sociosRowChangeEventHandler alq_peliculas_sociosRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event alq_peliculas_sociosRowChangeEventHandler alq_peliculas_sociosRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event alq_peliculas_sociosRowChangeEventHandler alq_peliculas_sociosRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event alq_peliculas_sociosRowChangeEventHandler alq_peliculas_sociosRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Addalq_peliculas_sociosRow(alq_peliculas_sociosRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public alq_peliculas_sociosRow Addalq_peliculas_sociosRow(System.DateTime FechaAlquiler, string titulo, sociosRow parentsociosRowByalquileres_fk_soc1, peliculasRow parentpeliculasRowByalquileres_fk_pel1, System.DateTime FechaDevolucion, decimal Precio) {
+                alq_peliculas_sociosRow rowalq_peliculas_sociosRow = ((alq_peliculas_sociosRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        FechaAlquiler,
+                        titulo,
+                        null,
+                        null,
+                        null,
+                        FechaDevolucion,
+                        Precio};
+                if ((parentsociosRowByalquileres_fk_soc1 != null)) {
+                    columnValuesArray[3] = parentsociosRowByalquileres_fk_soc1[0];
+                }
+                if ((parentpeliculasRowByalquileres_fk_pel1 != null)) {
+                    columnValuesArray[4] = parentpeliculasRowByalquileres_fk_pel1[0];
+                }
+                rowalq_peliculas_sociosRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowalq_peliculas_sociosRow);
+                return rowalq_peliculas_sociosRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public alq_peliculas_sociosRow FindBycodAlquiler(int codAlquiler) {
+                return ((alq_peliculas_sociosRow)(this.Rows.Find(new object[] {
+                            codAlquiler})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                alq_peliculas_sociosDataTable cln = ((alq_peliculas_sociosDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new alq_peliculas_sociosDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnFechaAlquiler = base.Columns["FechaAlquiler"];
+                this.columntitulo = base.Columns["titulo"];
+                this.columncodAlquiler = base.Columns["codAlquiler"];
+                this.columnSocio = base.Columns["Socio"];
+                this.columnPelicula = base.Columns["Pelicula"];
+                this.columnFechaDevolucion = base.Columns["FechaDevolucion"];
+                this.columnPrecio = base.Columns["Precio"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnFechaAlquiler = new global::System.Data.DataColumn("FechaAlquiler", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaAlquiler);
+                this.columntitulo = new global::System.Data.DataColumn("titulo", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntitulo);
+                this.columncodAlquiler = new global::System.Data.DataColumn("codAlquiler", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncodAlquiler);
+                this.columnSocio = new global::System.Data.DataColumn("Socio", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSocio);
+                this.columnPelicula = new global::System.Data.DataColumn("Pelicula", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPelicula);
+                this.columnFechaDevolucion = new global::System.Data.DataColumn("FechaDevolucion", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFechaDevolucion);
+                this.columnPrecio = new global::System.Data.DataColumn("Precio", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrecio);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columncodAlquiler}, true));
+                this.columntitulo.MaxLength = 80;
+                this.columncodAlquiler.AutoIncrement = true;
+                this.columncodAlquiler.AutoIncrementSeed = -1;
+                this.columncodAlquiler.AutoIncrementStep = -1;
+                this.columncodAlquiler.AllowDBNull = false;
+                this.columncodAlquiler.ReadOnly = true;
+                this.columncodAlquiler.Unique = true;
+                this.columnSocio.AllowDBNull = false;
+                this.columnPelicula.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public alq_peliculas_sociosRow Newalq_peliculas_sociosRow() {
+                return ((alq_peliculas_sociosRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new alq_peliculas_sociosRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(alq_peliculas_sociosRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.alq_peliculas_sociosRowChanged != null)) {
+                    this.alq_peliculas_sociosRowChanged(this, new alq_peliculas_sociosRowChangeEvent(((alq_peliculas_sociosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.alq_peliculas_sociosRowChanging != null)) {
+                    this.alq_peliculas_sociosRowChanging(this, new alq_peliculas_sociosRowChangeEvent(((alq_peliculas_sociosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.alq_peliculas_sociosRowDeleted != null)) {
+                    this.alq_peliculas_sociosRowDeleted(this, new alq_peliculas_sociosRowChangeEvent(((alq_peliculas_sociosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.alq_peliculas_sociosRowDeleting != null)) {
+                    this.alq_peliculas_sociosRowDeleting(this, new alq_peliculas_sociosRowChangeEvent(((alq_peliculas_sociosRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Removealq_peliculas_sociosRow(alq_peliculas_sociosRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                videoclubBinarioDataSet ds = new videoclubBinarioDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "alq_peliculas_sociosDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2486,10 +2889,10 @@ namespace Peliculas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string caratula {
+            public byte[] caratula {
                 get {
                     try {
-                        return ((string)(this[this.tablepeliculas.caratulaColumn]));
+                        return ((byte[])(this[this.tablepeliculas.caratulaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'caratula\' de la tabla \'peliculas\' es DBNull.", e);
@@ -2641,6 +3044,17 @@ namespace Peliculas {
                 }
                 else {
                     return ((alquileresRow[])(base.GetChildRows(this.Table.ChildRelations["alquileres_fk_pel"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public alq_peliculas_sociosRow[] Getalq_peliculas_sociosRows() {
+                if ((this.Table.ChildRelations["alquileres_fk_pel1"] == null)) {
+                    return new alq_peliculas_sociosRow[0];
+                }
+                else {
+                    return ((alq_peliculas_sociosRow[])(base.GetChildRows(this.Table.ChildRelations["alquileres_fk_pel1"])));
                 }
             }
         }
@@ -2932,6 +3346,201 @@ namespace Peliculas {
                     return ((alquileresRow[])(base.GetChildRows(this.Table.ChildRelations["alquileres_fk_soc"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public alq_peliculas_sociosRow[] Getalq_peliculas_sociosRows() {
+                if ((this.Table.ChildRelations["alquileres_fk_soc1"] == null)) {
+                    return new alq_peliculas_sociosRow[0];
+                }
+                else {
+                    return ((alq_peliculas_sociosRow[])(base.GetChildRows(this.Table.ChildRelations["alquileres_fk_soc1"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class alq_peliculas_sociosRow : global::System.Data.DataRow {
+            
+            private alq_peliculas_sociosDataTable tablealq_peliculas_socios;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal alq_peliculas_sociosRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablealq_peliculas_socios = ((alq_peliculas_sociosDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime FechaAlquiler {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablealq_peliculas_socios.FechaAlquilerColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaAlquiler\' de la tabla \'alq_peliculas_socios\' es DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tablealq_peliculas_socios.FechaAlquilerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string titulo {
+                get {
+                    try {
+                        return ((string)(this[this.tablealq_peliculas_socios.tituloColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'titulo\' de la tabla \'alq_peliculas_socios\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablealq_peliculas_socios.tituloColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int codAlquiler {
+                get {
+                    return ((int)(this[this.tablealq_peliculas_socios.codAlquilerColumn]));
+                }
+                set {
+                    this[this.tablealq_peliculas_socios.codAlquilerColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Socio {
+                get {
+                    return ((int)(this[this.tablealq_peliculas_socios.SocioColumn]));
+                }
+                set {
+                    this[this.tablealq_peliculas_socios.SocioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Pelicula {
+                get {
+                    return ((int)(this[this.tablealq_peliculas_socios.PeliculaColumn]));
+                }
+                set {
+                    this[this.tablealq_peliculas_socios.PeliculaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime FechaDevolucion {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tablealq_peliculas_socios.FechaDevolucionColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FechaDevolucion\' de la tabla \'alq_peliculas_socios\' es DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tablealq_peliculas_socios.FechaDevolucionColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal Precio {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablealq_peliculas_socios.PrecioColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Precio\' de la tabla \'alq_peliculas_socios\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablealq_peliculas_socios.PrecioColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public peliculasRow peliculasRow {
+                get {
+                    return ((peliculasRow)(this.GetParentRow(this.Table.ParentRelations["alquileres_fk_pel1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["alquileres_fk_pel1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public sociosRow sociosRow {
+                get {
+                    return ((sociosRow)(this.GetParentRow(this.Table.ParentRelations["alquileres_fk_soc1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["alquileres_fk_soc1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFechaAlquilerNull() {
+                return this.IsNull(this.tablealq_peliculas_socios.FechaAlquilerColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFechaAlquilerNull() {
+                this[this.tablealq_peliculas_socios.FechaAlquilerColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IstituloNull() {
+                return this.IsNull(this.tablealq_peliculas_socios.tituloColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SettituloNull() {
+                this[this.tablealq_peliculas_socios.tituloColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsFechaDevolucionNull() {
+                return this.IsNull(this.tablealq_peliculas_socios.FechaDevolucionColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetFechaDevolucionNull() {
+                this[this.tablealq_peliculas_socios.FechaDevolucionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPrecioNull() {
+                return this.IsNull(this.tablealq_peliculas_socios.PrecioColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPrecioNull() {
+                this[this.tablealq_peliculas_socios.PrecioColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -3103,9 +3712,43 @@ namespace Peliculas {
                 }
             }
         }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class alq_peliculas_sociosRowChangeEvent : global::System.EventArgs {
+            
+            private alq_peliculas_sociosRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public alq_peliculas_sociosRowChangeEvent(alq_peliculas_sociosRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public alq_peliculas_sociosRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
     }
 }
-namespace Peliculas.videoclubDataSetTableAdapters {
+namespace Peliculas.videoclubBinarioDataSetTableAdapters {
     
     
     /// <summary>
@@ -3285,31 +3928,25 @@ SELECT codAlquiler, fechaAlquiler, socio, pelicula, fechaDevolucion, precio FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Peliculas.Properties.Settings.Default.videoclubConnectionString;
+            this._connection.ConnectionString = global::Peliculas.Properties.Settings.Default.videoclubBinarioConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT codAlquiler, fechaAlquiler, socio, pelicula, fechaDevolucion, precio FROM " +
                 "dbo.alquileres";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT codAlquiler, fechaAlquiler, socio, pelicula, fechaDevolucion, precio FROM " +
-                "dbo.alquileres WHERE (pelicula=@peli)";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@peli", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "pelicula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(videoclubDataSet.alquileresDataTable dataTable) {
+        public virtual int Fill(videoclubBinarioDataSet.alquileresDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3322,9 +3959,9 @@ SELECT codAlquiler, fechaAlquiler, socio, pelicula, fechaDevolucion, precio FROM
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual videoclubDataSet.alquileresDataTable GetData() {
+        public virtual videoclubBinarioDataSet.alquileresDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            videoclubDataSet.alquileresDataTable dataTable = new videoclubDataSet.alquileresDataTable();
+            videoclubBinarioDataSet.alquileresDataTable dataTable = new videoclubBinarioDataSet.alquileresDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3332,40 +3969,14 @@ SELECT codAlquiler, fechaAlquiler, socio, pelicula, fechaDevolucion, precio FROM
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByPeliculas(videoclubDataSet.alquileresDataTable dataTable, int peli) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(peli));
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual videoclubDataSet.alquileresDataTable GetDataByPeliculas(int peli) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(peli));
-            videoclubDataSet.alquileresDataTable dataTable = new videoclubDataSet.alquileresDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(videoclubDataSet.alquileresDataTable dataTable) {
+        public virtual int Update(videoclubBinarioDataSet.alquileresDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(videoclubDataSet dataSet) {
+        public virtual int Update(videoclubBinarioDataSet dataSet) {
             return this.Adapter.Update(dataSet, "alquileres");
         }
         
@@ -3706,7 +4317,7 @@ SELECT categoria, precio FROM categorias WHERE (categoria = @categoria)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Peliculas.Properties.Settings.Default.videoclubConnectionString;
+            this._connection.ConnectionString = global::Peliculas.Properties.Settings.Default.videoclubBinarioConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3723,7 +4334,7 @@ SELECT categoria, precio FROM categorias WHERE (categoria = @categoria)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(videoclubDataSet.categoriasDataTable dataTable) {
+        public virtual int Fill(videoclubBinarioDataSet.categoriasDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3736,9 +4347,9 @@ SELECT categoria, precio FROM categorias WHERE (categoria = @categoria)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual videoclubDataSet.categoriasDataTable GetData() {
+        public virtual videoclubBinarioDataSet.categoriasDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            videoclubDataSet.categoriasDataTable dataTable = new videoclubDataSet.categoriasDataTable();
+            videoclubBinarioDataSet.categoriasDataTable dataTable = new videoclubBinarioDataSet.categoriasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3746,14 +4357,14 @@ SELECT categoria, precio FROM categorias WHERE (categoria = @categoria)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(videoclubDataSet.categoriasDataTable dataTable) {
+        public virtual int Update(videoclubBinarioDataSet.categoriasDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(videoclubDataSet dataSet) {
+        public virtual int Update(videoclubBinarioDataSet dataSet) {
             return this.Adapter.Update(dataSet, "categorias");
         }
         
@@ -4043,7 +4654,7 @@ SELECT categoria, precio FROM categorias WHERE (categoria = @categoria)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Peliculas.Properties.Settings.Default.videoclubConnectionString;
+            this._connection.ConnectionString = global::Peliculas.Properties.Settings.Default.videoclubBinarioConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4060,7 +4671,7 @@ SELECT categoria, precio FROM categorias WHERE (categoria = @categoria)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(videoclubDataSet.estilosDataTable dataTable) {
+        public virtual int Fill(videoclubBinarioDataSet.estilosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4073,9 +4684,9 @@ SELECT categoria, precio FROM categorias WHERE (categoria = @categoria)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual videoclubDataSet.estilosDataTable GetData() {
+        public virtual videoclubBinarioDataSet.estilosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            videoclubDataSet.estilosDataTable dataTable = new videoclubDataSet.estilosDataTable();
+            videoclubBinarioDataSet.estilosDataTable dataTable = new videoclubBinarioDataSet.estilosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4083,14 +4694,14 @@ SELECT categoria, precio FROM categorias WHERE (categoria = @categoria)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(videoclubDataSet.estilosDataTable dataTable) {
+        public virtual int Update(videoclubBinarioDataSet.estilosDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(videoclubDataSet dataSet) {
+        public virtual int Update(videoclubBinarioDataSet dataSet) {
             return this.Adapter.Update(dataSet, "estilos");
         }
         
@@ -4339,13 +4950,27 @@ SELECT categoria, precio FROM categorias WHERE (categoria = @categoria)";
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM peliculas\r\nWHERE        (codpeli = @Original_codpeli)";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[peliculas] WHERE (([codpeli] = @Original_codpeli) AND ((@IsNull_titulo = 1 AND [titulo] IS NULL) OR ([titulo] = @Original_titulo)) AND ((@IsNull_director = 1 AND [director] IS NULL) OR ([director] = @Original_director)) AND ((@IsNull_protagonista = 1 AND [protagonista] IS NULL) OR ([protagonista] = @Original_protagonista)) AND ((@IsNull_argumento = 1 AND [argumento] IS NULL) OR ([argumento] = @Original_argumento)) AND ([estilo] = @Original_estilo) AND ((@IsNull_anio = 1 AND [anio] IS NULL) OR ([anio] = @Original_anio)) AND ([categoria] = @Original_categoria) AND ((@IsNull_stock = 1 AND [stock] IS NULL) OR ([stock] = @Original_stock)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codpeli", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "codpeli", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codpeli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codpeli", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_titulo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "titulo", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_titulo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "titulo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_director", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "director", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_director", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "director", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_protagonista", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "protagonista", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_protagonista", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "protagonista", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_argumento", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "argumento", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_argumento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "argumento", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_estilo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estilo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_anio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "anio", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_anio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "anio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_categoria", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoria", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_stock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "stock", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_stock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "stock", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[peliculas] ([titulo], [director], [protagonista], [argumento], [estilo], [anio], [caratula], [categoria], [stock]) VALUES (@titulo, @director, @protagonista, @argumento, @estilo, @anio, @caratula, @categoria, @stock);
-SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratula, categoria, stock FROM peliculas WHERE (codpeli = SCOPE_IDENTITY()) ORDER BY titulo";
+SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratula, categoria, stock FROM peliculas WHERE (codpeli = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@titulo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "titulo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@director", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "director", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4353,13 +4978,13 @@ SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratul
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@argumento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "argumento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estilo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estilo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@anio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "anio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@caratula", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "caratula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@caratula", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "caratula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@categoria", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoria", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@stock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "stock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[peliculas] SET [titulo] = @titulo, [director] = @director, [protagonista] = @protagonista, [argumento] = @argumento, [estilo] = @estilo, [anio] = @anio, [caratula] = @caratula, [categoria] = @categoria, [stock] = @stock WHERE (([codpeli] = @Original_codpeli) AND ((@IsNull_titulo = 1 AND [titulo] IS NULL) OR ([titulo] = @Original_titulo)) AND ((@IsNull_director = 1 AND [director] IS NULL) OR ([director] = @Original_director)) AND ((@IsNull_protagonista = 1 AND [protagonista] IS NULL) OR ([protagonista] = @Original_protagonista)) AND ((@IsNull_argumento = 1 AND [argumento] IS NULL) OR ([argumento] = @Original_argumento)) AND ([estilo] = @Original_estilo) AND ((@IsNull_anio = 1 AND [anio] IS NULL) OR ([anio] = @Original_anio)) AND ((@IsNull_caratula = 1 AND [caratula] IS NULL) OR ([caratula] = @Original_caratula)) AND ([categoria] = @Original_categoria) AND ((@IsNull_stock = 1 AND [stock] IS NULL) OR ([stock] = @Original_stock)));
-SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratula, categoria, stock FROM peliculas WHERE (codpeli = @codpeli) ORDER BY titulo";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[peliculas] SET [titulo] = @titulo, [director] = @director, [protagonista] = @protagonista, [argumento] = @argumento, [estilo] = @estilo, [anio] = @anio, [caratula] = @caratula, [categoria] = @categoria, [stock] = @stock WHERE (([codpeli] = @Original_codpeli) AND ((@IsNull_titulo = 1 AND [titulo] IS NULL) OR ([titulo] = @Original_titulo)) AND ((@IsNull_director = 1 AND [director] IS NULL) OR ([director] = @Original_director)) AND ((@IsNull_protagonista = 1 AND [protagonista] IS NULL) OR ([protagonista] = @Original_protagonista)) AND ((@IsNull_argumento = 1 AND [argumento] IS NULL) OR ([argumento] = @Original_argumento)) AND ([estilo] = @Original_estilo) AND ((@IsNull_anio = 1 AND [anio] IS NULL) OR ([anio] = @Original_anio)) AND ([categoria] = @Original_categoria) AND ((@IsNull_stock = 1 AND [stock] IS NULL) OR ([stock] = @Original_stock)));
+SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratula, categoria, stock FROM peliculas WHERE (codpeli = @codpeli)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@titulo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "titulo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@director", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "director", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4367,7 +4992,7 @@ SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratul
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@argumento", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "argumento", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@estilo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estilo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@anio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "anio", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@caratula", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "caratula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@caratula", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "caratula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@categoria", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoria", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@stock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "stock", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codpeli", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codpeli", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4382,8 +5007,6 @@ SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratul
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_estilo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "estilo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_anio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "anio", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_anio", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "anio", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_caratula", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "caratula", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_caratula", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "caratula", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_categoria", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "categoria", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_stock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "stock", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_stock", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "stock", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -4394,31 +5017,25 @@ SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratul
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Peliculas.Properties.Settings.Default.videoclubConnectionString;
+            this._connection.ConnectionString = global::Peliculas.Properties.Settings.Default.videoclubBinarioConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratula" +
-                ", categoria, stock FROM dbo.peliculas ORDER BY titulo";
+                ", categoria, stock FROM dbo.peliculas";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratula" +
-                ", categoria, stock FROM peliculas WHERE (titulo=@tit) ";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tit", global::System.Data.SqlDbType.VarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, "titulo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(videoclubDataSet.peliculasDataTable dataTable) {
+        public virtual int Fill(videoclubBinarioDataSet.peliculasDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4431,9 +5048,9 @@ SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratul
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual videoclubDataSet.peliculasDataTable GetData() {
+        public virtual videoclubBinarioDataSet.peliculasDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            videoclubDataSet.peliculasDataTable dataTable = new videoclubDataSet.peliculasDataTable();
+            videoclubBinarioDataSet.peliculasDataTable dataTable = new videoclubBinarioDataSet.peliculasDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4441,50 +5058,14 @@ SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratul
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByTitulo(videoclubDataSet.peliculasDataTable dataTable, string tit) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((tit == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(tit));
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual videoclubDataSet.peliculasDataTable GetDataByTitulo(string tit) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((tit == null)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(tit));
-            }
-            videoclubDataSet.peliculasDataTable dataTable = new videoclubDataSet.peliculasDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(videoclubDataSet.peliculasDataTable dataTable) {
+        public virtual int Update(videoclubBinarioDataSet.peliculasDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(videoclubDataSet dataSet) {
+        public virtual int Update(videoclubBinarioDataSet dataSet) {
             return this.Adapter.Update(dataSet, "peliculas");
         }
         
@@ -4507,8 +5088,68 @@ SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratul
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_codpeli) {
+        public virtual int Delete(int Original_codpeli, string Original_titulo, string Original_director, string Original_protagonista, string Original_argumento, string Original_estilo, global::System.Nullable<int> Original_anio, string Original_categoria, global::System.Nullable<int> Original_stock) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_codpeli));
+            if ((Original_titulo == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_titulo));
+            }
+            if ((Original_director == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_director));
+            }
+            if ((Original_protagonista == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_protagonista));
+            }
+            if ((Original_argumento == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_argumento));
+            }
+            if ((Original_estilo == null)) {
+                throw new global::System.ArgumentNullException("Original_estilo");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_estilo));
+            }
+            if ((Original_anio.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_anio.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            if ((Original_categoria == null)) {
+                throw new global::System.ArgumentNullException("Original_categoria");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[12].Value = ((string)(Original_categoria));
+            }
+            if ((Original_stock.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_stock.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4529,7 +5170,7 @@ SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratul
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string titulo, string director, string protagonista, string argumento, string estilo, global::System.Nullable<int> anio, string caratula, string categoria, global::System.Nullable<int> stock) {
+        public virtual int Insert(string titulo, string director, string protagonista, string argumento, string estilo, global::System.Nullable<int> anio, byte[] caratula, string categoria, global::System.Nullable<int> stock) {
             if ((titulo == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4570,7 +5211,7 @@ SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratul
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(caratula));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((byte[])(caratula));
             }
             if ((categoria == null)) {
                 throw new global::System.ArgumentNullException("categoria");
@@ -4611,7 +5252,7 @@ SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratul
                     string argumento, 
                     string estilo, 
                     global::System.Nullable<int> anio, 
-                    string caratula, 
+                    byte[] caratula, 
                     string categoria, 
                     global::System.Nullable<int> stock, 
                     int Original_codpeli, 
@@ -4621,7 +5262,6 @@ SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratul
                     string Original_argumento, 
                     string Original_estilo, 
                     global::System.Nullable<int> Original_anio, 
-                    string Original_caratula, 
                     string Original_categoria, 
                     global::System.Nullable<int> Original_stock, 
                     int codpeli) {
@@ -4665,7 +5305,7 @@ SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratul
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(caratula));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((byte[])(caratula));
             }
             if ((categoria == null)) {
                 throw new global::System.ArgumentNullException("categoria");
@@ -4726,29 +5366,21 @@ SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratul
                 this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
-            if ((Original_caratula == null)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_caratula));
-            }
             if ((Original_categoria == null)) {
                 throw new global::System.ArgumentNullException("Original_categoria");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_categoria));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_categoria));
             }
             if ((Original_stock.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_stock.Value));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(Original_stock.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(codpeli));
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(codpeli));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4776,7 +5408,7 @@ SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratul
                     string argumento, 
                     string estilo, 
                     global::System.Nullable<int> anio, 
-                    string caratula, 
+                    byte[] caratula, 
                     string categoria, 
                     global::System.Nullable<int> stock, 
                     int Original_codpeli, 
@@ -4786,10 +5418,9 @@ SELECT codpeli, titulo, director, protagonista, argumento, estilo, anio, caratul
                     string Original_argumento, 
                     string Original_estilo, 
                     global::System.Nullable<int> Original_anio, 
-                    string Original_caratula, 
                     string Original_categoria, 
                     global::System.Nullable<int> Original_stock) {
-            return this.Update(titulo, director, protagonista, argumento, estilo, anio, caratula, categoria, stock, Original_codpeli, Original_titulo, Original_director, Original_protagonista, Original_argumento, Original_estilo, Original_anio, Original_caratula, Original_categoria, Original_stock, Original_codpeli);
+            return this.Update(titulo, director, protagonista, argumento, estilo, anio, caratula, categoria, stock, Original_codpeli, Original_titulo, Original_director, Original_protagonista, Original_argumento, Original_estilo, Original_anio, Original_categoria, Original_stock, Original_codpeli);
         }
     }
     
@@ -5002,25 +5633,34 @@ SELECT idSocio, login, pwd, nombre, apell1, apell2, direccion, localidad, telefo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Peliculas.Properties.Settings.Default.videoclubConnectionString;
+            this._connection.ConnectionString = global::Peliculas.Properties.Settings.Default.videoclubBinarioConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idSocio, login, pwd, nombre, apell1, apell2, direccion, localidad, telefon" +
                 "o, email FROM dbo.socios";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT idSocio, login, pwd, nombre, apell1, apell2, direccion, localidad, telefon" +
+                "o, email FROM dbo.socios\r\nWHERE (nombre LIKE {fn CONCAT(@name, \'%\')}) AND (apell" +
+                "1 LIKE {fn CONCAT(@ap1,\'%\')}) AND (apell2 LIKE {fn CONCAT(@ap2,\'%\')})";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, "nombre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ap1", global::System.Data.SqlDbType.VarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, "apell1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ap2", global::System.Data.SqlDbType.VarChar, 80, global::System.Data.ParameterDirection.Input, 0, 0, "apell2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(videoclubDataSet.sociosDataTable dataTable) {
+        public virtual int Fill(videoclubBinarioDataSet.sociosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5033,9 +5673,9 @@ SELECT idSocio, login, pwd, nombre, apell1, apell2, direccion, localidad, telefo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual videoclubDataSet.sociosDataTable GetData() {
+        public virtual videoclubBinarioDataSet.sociosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            videoclubDataSet.sociosDataTable dataTable = new videoclubDataSet.sociosDataTable();
+            videoclubBinarioDataSet.sociosDataTable dataTable = new videoclubBinarioDataSet.sociosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5043,14 +5683,74 @@ SELECT idSocio, login, pwd, nombre, apell1, apell2, direccion, localidad, telefo
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(videoclubDataSet.sociosDataTable dataTable) {
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBy(videoclubBinarioDataSet.sociosDataTable dataTable, string name, string ap1, string ap2) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((name == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(name));
+            }
+            if ((ap1 == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(ap1));
+            }
+            if ((ap2 == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(ap2));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual videoclubBinarioDataSet.sociosDataTable GetDataBy(string name, string ap1, string ap2) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((name == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(name));
+            }
+            if ((ap1 == null)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(ap1));
+            }
+            if ((ap2 == null)) {
+                this.Adapter.SelectCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(ap2));
+            }
+            videoclubBinarioDataSet.sociosDataTable dataTable = new videoclubBinarioDataSet.sociosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(videoclubBinarioDataSet.sociosDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(videoclubDataSet dataSet) {
+        public virtual int Update(videoclubBinarioDataSet dataSet) {
             return this.Adapter.Update(dataSet, "socios");
         }
         
@@ -5436,6 +6136,217 @@ SELECT idSocio, login, pwd, nombre, apell1, apell2, direccion, localidad, telefo
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class alq_peliculas_sociosTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public alq_peliculas_sociosTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "alq_peliculas_socios";
+            tableMapping.ColumnMappings.Add("FechaAlquiler", "FechaAlquiler");
+            tableMapping.ColumnMappings.Add("titulo", "titulo");
+            tableMapping.ColumnMappings.Add("codAlquiler", "codAlquiler");
+            tableMapping.ColumnMappings.Add("Socio", "Socio");
+            tableMapping.ColumnMappings.Add("Pelicula", "Pelicula");
+            tableMapping.ColumnMappings.Add("FechaDevolucion", "FechaDevolucion");
+            tableMapping.ColumnMappings.Add("Precio", "Precio");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::Peliculas.Properties.Settings.Default.videoclubBinarioConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT        alquileres.codAlquiler AS codAlquiler, alquileres.socio AS Socio, alquileres.pelicula AS Pelicula, alquileres.fechaAlquiler AS FechaAlquiler, alquileres.fechaDevolucion AS FechaDevolucion, alquileres.precio AS Precio, peliculas.titulo
+FROM            alquileres INNER JOIN
+                         peliculas ON alquileres.pelicula = peliculas.codpeli
+ORDER BY FechaAlquiler";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        alquileres.codAlquiler AS Expr1, alquileres.socio AS Expr2, alquileres.pelicula AS Expr3, alquileres.fechaAlquiler AS FechaAlquiler, alquileres.fechaDevolucion AS Expr5, alquileres.precio AS Expr6, peliculas.titulo
+FROM            alquileres INNER JOIN
+                         peliculas ON alquileres.pelicula = peliculas.codpeli
+WHERE        (alquileres.socio = @socio)
+ORDER BY FechaAlquiler";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@socio", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Expr2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(videoclubBinarioDataSet.alq_peliculas_sociosDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual videoclubBinarioDataSet.alq_peliculas_sociosDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            videoclubBinarioDataSet.alq_peliculas_sociosDataTable dataTable = new videoclubBinarioDataSet.alq_peliculas_sociosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBySocio(videoclubBinarioDataSet.alq_peliculas_sociosDataTable dataTable, int socio) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(socio));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual videoclubBinarioDataSet.alq_peliculas_sociosDataTable GetDataBySocio(int socio) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(socio));
+            videoclubBinarioDataSet.alq_peliculas_sociosDataTable dataTable = new videoclubBinarioDataSet.alq_peliculas_sociosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -5618,7 +6529,7 @@ SELECT idSocio, login, pwd, nombre, apell1, apell2, direccion, localidad, telefo
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(videoclubDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(videoclubBinarioDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._categoriasTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.categorias.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -5673,7 +6584,7 @@ SELECT idSocio, login, pwd, nombre, apell1, apell2, direccion, localidad, telefo
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(videoclubDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(videoclubBinarioDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._categoriasTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.categorias.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -5723,7 +6634,7 @@ SELECT idSocio, login, pwd, nombre, apell1, apell2, direccion, localidad, telefo
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(videoclubDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(videoclubBinarioDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._alquileresTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.alquileres.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -5797,7 +6708,7 @@ SELECT idSocio, login, pwd, nombre, apell1, apell2, direccion, localidad, telefo
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(videoclubDataSet dataSet) {
+        public virtual int UpdateAll(videoclubBinarioDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
