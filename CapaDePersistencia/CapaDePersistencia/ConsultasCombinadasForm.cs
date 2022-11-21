@@ -52,12 +52,36 @@ namespace CapaDePersistencia
                     qConsulta = qConsulta.Where(x => x.titulo.ToUpper().StartsWith(etxtTitulo.Text.ToUpper()));
                 }
 
-                if (!etxtAnio.Text.Trim().Equals("")) { 
-                    int anio = Int32.Parse(etxtAnio.Text.Trim());
-                    qConsulta = qConsulta.Where(x => x.anio >= anio);
+                if (!etxtAnio.Text.Trim().Equals(""))
+                {
+                    try {
+                        int anio = int.Parse(etxtAnio.Text.Trim());
+                        qConsulta = qConsulta.Where(x => x.anio >= anio);
+                    } catch (Exception) { }                    
+                }
+                if (!etxtNombre.Text.Trim().Equals("")) {
+                    qConsulta = qConsulta.Where(x => x.nombre.ToUpper().StartsWith(etxtTitulo.Text.ToUpper()));
+                }
+                if (!cbEstilo.Text.Trim().Equals("")) { 
+                    qConsulta = qConsulta.Where(x => x.estilo.ToUpper().StartsWith(cbEstilo.Text.ToUpper()));
+                }
+                if (!cbCategoria.Text.Trim().Equals(""))
+                {
+                    qConsulta = qConsulta.Where(x => x.categoria.ToUpper().StartsWith(cbCategoria.Text.ToUpper()));
                 }
 
-                
+                //Para ocultar columnas:
+                //dgvPeliculas.Columns[0].Visible = false;
+                //dgvPeliculas.Columns[1].Visible = false;
+                //dgvPeliculas.Columns[2].Visible = false;
+                //dgvPeliculas.Columns[3].Visible = false;
+                //dgvPeliculas.Columns[4].Visible = false;
+                //dgvPeliculas.Columns[5].Visible = false;
+                //dgvPeliculas.Columns[6].Visible = false;
+                //dgvPeliculas.Columns[7].Visible = false;
+
+                //Para cambiar el titulo:
+                //dgvPeliculas.Columns[7].HeaderText = "Lo Que sea";
             }
 
                 

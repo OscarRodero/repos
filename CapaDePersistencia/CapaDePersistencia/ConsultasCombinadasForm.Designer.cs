@@ -165,6 +165,7 @@
             // 
             // dgvPeliculas
             // 
+            this.dgvPeliculas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPeliculas.Location = new System.Drawing.Point(40, 248);
             this.dgvPeliculas.Name = "dgvPeliculas";
