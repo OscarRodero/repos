@@ -1,0 +1,17 @@
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\bin\Debug\CapaDePersistencia.exe.config
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\bin\Debug\CapaDePersistencia.exe
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\bin\Debug\CapaDePersistencia.pdb
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\bin\Debug\EntityFramework.dll
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\bin\Debug\EntityFramework.xml
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\obj\Debug\CapaDePersistencia.csproj.AssemblyReference.cache
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\obj\Debug\CapaDePersistencia.csproj.SuggestedBindingRedirects.cache
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\obj\Debug\CapaDePersistencia.Form1.resources
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\obj\Debug\CapaDePersistencia.Properties.Resources.resources
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\obj\Debug\CapaDePersistencia.csproj.GenerateResource.cache
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\obj\Debug\CapaDePersistencia.csproj.CoreCompileInputs.cache
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\obj\Debug\CapaDePersistencia.csproj.CopyComplete
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\obj\Debug\CapaDePersistencia.exe
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\obj\Debug\CapaDePersistencia.pdb
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\obj\Debug\CapaDePersistencia.AddPeliculaForm.resources
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\obj\Debug\CapaDePersistencia.ConsultasCombinadasForm.resources
+C:\Users\dam201\source\repos\CapaDePersistencia\CapaDePersistencia\obj\Debug\CapaDePersistencia.Consultas.resources

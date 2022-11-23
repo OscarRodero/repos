@@ -1,0 +1,17 @@
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\bin\Debug\net6.0-windows\ProbandoXML.exe
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\bin\Debug\net6.0-windows\ProbandoXML.deps.json
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\bin\Debug\net6.0-windows\ProbandoXML.runtimeconfig.json
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\bin\Debug\net6.0-windows\ProbandoXML.dll
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\bin\Debug\net6.0-windows\ProbandoXML.pdb
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\obj\Debug\net6.0-windows\ProbandoXML.csproj.AssemblyReference.cache
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\obj\Debug\net6.0-windows\ProbandoXML.Form1.resources
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\obj\Debug\net6.0-windows\ProbandoXML.csproj.GenerateResource.cache
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\obj\Debug\net6.0-windows\ProbandoXML.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\obj\Debug\net6.0-windows\ProbandoXML.AssemblyInfoInputs.cache
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\obj\Debug\net6.0-windows\ProbandoXML.AssemblyInfo.cs
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\obj\Debug\net6.0-windows\ProbandoXML.csproj.CoreCompileInputs.cache
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\obj\Debug\net6.0-windows\ProbandoXML.dll
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\obj\Debug\net6.0-windows\refint\ProbandoXML.dll
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\obj\Debug\net6.0-windows\ProbandoXML.pdb
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\obj\Debug\net6.0-windows\ProbandoXML.genruntimeconfig.cache
+C:\Users\dam201\source\repos\ProbandoXML\ProbandoXML\obj\Debug\net6.0-windows\ref\ProbandoXML.dll

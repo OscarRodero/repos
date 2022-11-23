@@ -1,0 +1,12 @@
+C:\Users\dam201\source\repos\WindowsFormVideoClub\WindowsFormVideoClub\bin\Debug\WindowsFormVideoClub.exe.config
+C:\Users\dam201\source\repos\WindowsFormVideoClub\WindowsFormVideoClub\bin\Debug\WindowsFormVideoClub.exe
+C:\Users\dam201\source\repos\WindowsFormVideoClub\WindowsFormVideoClub\bin\Debug\WindowsFormVideoClub.pdb
+C:\Users\dam201\source\repos\WindowsFormVideoClub\WindowsFormVideoClub\obj\Debug\WindowsFormVideoClub.csproj.AssemblyReference.cache
+C:\Users\dam201\source\repos\WindowsFormVideoClub\WindowsFormVideoClub\obj\Debug\WindowsFormVideoClub.csproj.SuggestedBindingRedirects.cache
+C:\Users\dam201\source\repos\WindowsFormVideoClub\WindowsFormVideoClub\obj\Debug\WindowsFormVideoClub.Form1.resources
+C:\Users\dam201\source\repos\WindowsFormVideoClub\WindowsFormVideoClub\obj\Debug\WindowsFormVideoClub.Properties.Resources.resources
+C:\Users\dam201\source\repos\WindowsFormVideoClub\WindowsFormVideoClub\obj\Debug\WindowsFormVideoClub.csproj.GenerateResource.cache
+C:\Users\dam201\source\repos\WindowsFormVideoClub\WindowsFormVideoClub\obj\Debug\WindowsFormVideoClub.csproj.CoreCompileInputs.cache
+C:\Users\dam201\source\repos\WindowsFormVideoClub\WindowsFormVideoClub\obj\Debug\WindowsFormVideoClub.exe
+C:\Users\dam201\source\repos\WindowsFormVideoClub\WindowsFormVideoClub\obj\Debug\WindowsFormVideoClub.pdb
+C:\Users\dam201\source\repos\WindowsFormVideoClub\WindowsFormVideoClub\obj\Debug\WindowsFormVideoClub.FormDetalle.resources

@@ -1,0 +1,11 @@
+C:\Users\dam201\source\repos\Horario\Horario\bin\Debug\Horario.exe.config
+C:\Users\dam201\source\repos\Horario\Horario\bin\Debug\Horario.exe
+C:\Users\dam201\source\repos\Horario\Horario\bin\Debug\Horario.pdb
+C:\Users\dam201\source\repos\Horario\Horario\obj\Debug\Horario.csproj.AssemblyReference.cache
+C:\Users\dam201\source\repos\Horario\Horario\obj\Debug\Horario.csproj.SuggestedBindingRedirects.cache
+C:\Users\dam201\source\repos\Horario\Horario\obj\Debug\Horario.Form1.resources
+C:\Users\dam201\source\repos\Horario\Horario\obj\Debug\Horario.Properties.Resources.resources
+C:\Users\dam201\source\repos\Horario\Horario\obj\Debug\Horario.csproj.GenerateResource.cache
+C:\Users\dam201\source\repos\Horario\Horario\obj\Debug\Horario.csproj.CoreCompileInputs.cache
+C:\Users\dam201\source\repos\Horario\Horario\obj\Debug\Horario.exe
+C:\Users\dam201\source\repos\Horario\Horario\obj\Debug\Horario.pdb

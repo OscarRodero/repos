@@ -51,6 +51,7 @@
             this.btnValidar14 = new System.Windows.Forms.Button();
             this.btnValidar15 = new System.Windows.Forms.Button();
             this.btnValidar16 = new System.Windows.Forms.Button();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PB1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -259,11 +260,20 @@
             this.btnValidar16.UseVisualStyleBackColor = true;
             this.btnValidar16.Click += new System.EventHandler(this.btnValidar16_Click);
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(432, 288);
+            this.maskedTextBox1.Mask = "0000-LLL";
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.maskedTextBox1.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.btnValidar16);
             this.Controls.Add(this.btnValidar15);
             this.Controls.Add(this.btnValidar14);
@@ -315,5 +325,6 @@
         private Button btnValidar14;
         private Button btnValidar15;
         private Button btnValidar16;
+        private MaskedTextBox maskedTextBox1;
     }
 }

@@ -10,9 +10,10 @@ namespace ExpresionesRegularesEjer1
         private const string Patron4 = @"\A(lunes|martes|miercoles|jueves|viernes|sabado|domingo)\s\d{1,2}\Z";
         private const string Patron5 = @"\A([0-1]\d|2[0-3])[:][0-5]\d([:][0-5]\d)?\Z";
         private const string Patron6 = @"\A(ES)\d{2}[-]\d{4}[-]\d{2}[-]\d{10}\Z";
-        private const string Patron7 = @"\A([-]?\d{1})\Z";
-        private const string Patron8 = @"\A(\d{8}[TRWAGMYFPDXBNJZSQVHLCKE])\Z";
-        private const string Patron9 = @"\A([0-255][.][0-255][.][0-255][.][0-255])\Z"; //NoFunciona
+
+        private const string Patron7 = @"\A(0|[+-]?[1-9]\d*)\Z";
+        private const string Patron8 = @"\A(\d{8}[-][TRWAGMYFPDXBNJZSQVHLCKE])\Z";
+        private const string Patron9 = @"\A(([1-9]?\d|1\d{2}|2[0-4]\d|25[0-5])[.]){3}([1-9]?\d|1\d{2}|2[0-4]\d|25[0-5])\Z"; 
         private const string Patron10 = @"\A\d\d\d\d(\s)?[A-Z][A-Z][A-Z]";
         private const string Patron11 = @"\A([-]?\d{1}(.|,)\d)\Z";
         private const string Patron12 = @"\A([0-3]?\d[/][0-1]?\d[/][1-2]\d\d\d)\Z";
