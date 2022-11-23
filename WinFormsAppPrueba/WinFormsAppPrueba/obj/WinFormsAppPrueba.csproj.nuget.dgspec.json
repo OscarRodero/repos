@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dam201\\source\\repos\\WinFormsAppPrueba\\WinFormsAppPrueba\\WinFormsAppPrueba.csproj": {}
+    "D:\\insti\\2DAM\\DesarrolloInterfaces\\repos\\WinFormsAppPrueba\\WinFormsAppPrueba\\WinFormsAppPrueba.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dam201\\source\\repos\\WinFormsAppPrueba\\WinFormsAppPrueba\\WinFormsAppPrueba.csproj": {
+    "D:\\insti\\2DAM\\DesarrolloInterfaces\\repos\\WinFormsAppPrueba\\WinFormsAppPrueba\\WinFormsAppPrueba.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dam201\\source\\repos\\WinFormsAppPrueba\\WinFormsAppPrueba\\WinFormsAppPrueba.csproj",
+        "projectUniqueName": "D:\\insti\\2DAM\\DesarrolloInterfaces\\repos\\WinFormsAppPrueba\\WinFormsAppPrueba\\WinFormsAppPrueba.csproj",
         "projectName": "WinFormsAppPrueba",
-        "projectPath": "C:\\Users\\dam201\\source\\repos\\WinFormsAppPrueba\\WinFormsAppPrueba\\WinFormsAppPrueba.csproj",
-        "packagesPath": "C:\\Users\\dam201\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dam201\\source\\repos\\WinFormsAppPrueba\\WinFormsAppPrueba\\obj\\",
+        "projectPath": "D:\\insti\\2DAM\\DesarrolloInterfaces\\repos\\WinFormsAppPrueba\\WinFormsAppPrueba\\WinFormsAppPrueba.csproj",
+        "packagesPath": "C:\\Users\\Oscar\\.nuget\\packages\\",
+        "outputPath": "D:\\insti\\2DAM\\DesarrolloInterfaces\\repos\\WinFormsAppPrueba\\WinFormsAppPrueba\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\dam201\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Oscar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -62,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
