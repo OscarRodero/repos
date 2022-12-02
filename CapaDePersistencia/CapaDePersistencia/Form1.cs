@@ -16,7 +16,11 @@ namespace CapaDePersistencia
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Método para realizar una inserción.
+        /// </summary>
+        /// <param name="sender">Objeto que lanza el evento</param>
+        /// <param name="e">Argumentos para poder manejar el evento</param>
         private void btnInsert_Click(object sender, EventArgs e)
         {
             using (videoclubBinarioEntities objDB = new videoclubBinarioEntities()) {

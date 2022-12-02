@@ -7,7 +7,7 @@
     <ProjectGuid>{9F78D3DF-68B7-4B3E-BCF8-F2B61CFDF110}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>CapaDePersistencia</RootNamespace>
-    <AssemblyName>CapaDePersistencia</AssemblyName>
+    <AssemblyName>InstaladorCapaDePersistencia</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
